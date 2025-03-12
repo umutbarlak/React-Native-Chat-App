@@ -16,10 +16,12 @@ import {onAuthStateChanged} from 'firebase/auth';
 import {auth} from './src/firebase/config';
 import ChatIcon from './src/assets/icons/Chat';
 import SettingsIcon from './src/assets/icons/Settings';
+import {LogBox} from 'react-native';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
+LogBox.ignoreAllLogs();
 const TabNavigator = () => {
   return (
     <Tab.Navigator
